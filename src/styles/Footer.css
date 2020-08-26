@@ -1,0 +1,50 @@
+.newsletter{
+height: 200px;
+width: 100%;
+text-align: center;
+line-height: 200px;
+color: lightgrey;
+background-color: rgb(40, 40, 40);
+display: flex;
+justify-content: center;
+flex-grow: 1;
+}
+
+.newsletter p {
+  font-size: 25px;
+ padding-right: 40px;
+}
+
+.newsletter input{
+  background-color: rgb(40, 40, 40);
+  border: 1.5px solid burlywood;
+  width: 250px;
+  height: 35px;
+  color: lightgrey;
+  padding-left: 10px;
+}
+
+.newsletter input:hover{
+  border: 4px solid burlywood;
+}
+.newsletter input:focus {
+  border: 3px solid red;
+  outline: none;
+}
+
+
+.newsletter button{
+margin-left: 10px;
+width: 100px;
+height: 35px;
+border: none;
+background-color: burlywood;
+}
+
+.copywright{
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: grey;
+  background-color: #eee;
+}
