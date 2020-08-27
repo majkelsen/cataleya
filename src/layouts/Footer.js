@@ -4,7 +4,7 @@ import "../styles/Footer.css";
 
 const Footer = () => {
   return (
-    <>
+    <footer>
       <div className="newsletter">
         <p>Dołącz do newslettera:</p>
         <form action="">
@@ -12,10 +12,8 @@ const Footer = () => {
           <button>DOŁĄCZ</button>
         </form>
       </div>
-      <div className="copywright">©2020 by CATALEYA
-
-</div>
-    </>
+      <div className="copywright">©2020 by CATALEYA</div>
+    </footer>
 
   )
 }

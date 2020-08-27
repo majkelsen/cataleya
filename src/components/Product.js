@@ -1,9 +1,11 @@
 import React from 'react';
+import "../styles/Product.css";
 
-const Product = ({ name, text }) => {
+const Product = (props) => {
 
   return (
-    <article>
+    <article className="product">
+      <h5>Jesteś na stronie produktu:</h5> <h2>{props.id}</h2>
     </article>
   );
 }

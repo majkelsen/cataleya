@@ -1,0 +1,45 @@
+.ProductsPage .first {
+height: 400px;
+}
+
+.ProductsPage .first div {
+  background-color: blue;
+  bottom: 100px;
+  right: 120px;
+}
+
+.ProductsPage .productsGraphics div{
+  width: 100%;
+  position: relative;
+}
+
+.ProductsPage .productsGraphics ul{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+padding-bottom: 50px;
+list-style: none;
+}
+
+.ProductsPage .productsGraphics ul li a{
+  display: block;
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  margin: 30px;
+  text-decoration: none;
+  }
+
+.super-piguła a{
+  background-color: lightgray;
+}
+
+.mocny-kop a{
+  background-color: lightsalmon;
+}
+
+.coś-na-lenia a{
+  background-color: lightsteelblue;
+}
+
+

@@ -9,21 +9,27 @@ const MainPage = () => {
       <article className="first">
         <div>ALL FOR JU</div>
       </article>
+
       <article className="second">
         <div>BAJDUŻONKO</div>
       </article>
+
       <article className="third">
         <div>TAKI SE O <br></br>SCROLOWANY <br></br>OBRAZEK</div>
       </article>
+
       <article className="forth">
         <div>COSIK SE TU PISZE</div>
       </article>
+
       <article className="five">
         <div>TU TEŻ</div>
       </article>
+
       <article className="six">
         <div>NO I TU TEŻ</div>
       </article>
+
       <article className="seven">
         <Parallax
           bgImage={require('../img/thirdMain.png')}
@@ -32,6 +38,7 @@ const MainPage = () => {
         ><div style={{ height: '700px' }} />
         </Parallax>
       </article>
+
     </div>
   )
 }
