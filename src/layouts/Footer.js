@@ -8,6 +8,8 @@ class Footer extends Component {
   state = {
     email: "",
     isEmpty: true,
+    inputClass: '',
+
     error: false,
     errMessage: '',
     sent: false,
@@ -24,8 +26,6 @@ class Footer extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("wyslane request")
-
     const validation = this.formValidator()
 
     //validator checking
@@ -36,6 +36,7 @@ class Footer extends Component {
       this.setState({
         email: "",
         isEmpty: true,
+        inputClass: '',
         error: false,
         errMessage: '',
         sent: true,
@@ -61,7 +62,9 @@ class Footer extends Component {
   handleChange = (e) => {
     this.setState({
       email: e.target.value,
+      inputClass: "entered",
       isEmpty: false
+
     })
   }
 
@@ -112,7 +115,7 @@ class Footer extends Component {
           </div>
           <div className="newsRight">
             <form onSubmit={this.handleSubmit} noValidate>
-              <input value={this.state.email} onChange={this.handleChange} type="email" placeholder="Podaj email..." className={!this.state.isEmpty && "entered"} />
+              <input value={this.state.email} onChange={this.handleChange} type="email" placeholder="Podaj email..." className={this.state.inputClass} />
               <button>dołącz</button>
             </form>
 

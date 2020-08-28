@@ -20,7 +20,7 @@ article {
 }
 
 article div {
-  position: absolute;
+  /* position: absolute; */
 }
 
 article.first {
