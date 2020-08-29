@@ -9,11 +9,12 @@ class ContactPage extends Component {
     phone: '',
     email: '',
     message: '',
-    checkboxRODO: '',
+    checkboxRODO: false,
 
     error: false,
-    success: true,
-    submitMessage: '',
+    errMessage: '',
+    success: false,
+
   }
 
   handleChange = (e) => {
@@ -41,19 +42,28 @@ class ContactPage extends Component {
     if (validation.correct) {
       axios({
         method: "POST",
-        url: 'urlToBeSet',
+        url: 'api/contact/email.php',
         data: this.state
-      }).then(result => {
-        this.setState({
-          mailSent: result.data.sent,
-          success: true,
-          submitMessage: 'Wysłano email',
-        })
-      })
-
-    } else {
-      this.setState({
-        submitMessage: 'Błąd formularza',
+      }).then((response) => {
+        // console.log(response.data)
+        if (response.data.status === 'success') {
+          this.setState({
+            error: false,
+            success: true,
+            name: '',
+            company: '',
+            phone: '',
+            email: '',
+            message: '',
+            checkboxRODO: false,
+          })
+        } else if (response.data.status === 'fail') {
+          this.setState({
+            success: false,
+            error: true,
+            errMessage: response.data.error[0]
+          })
+        }
       })
     }
   }
@@ -74,11 +84,11 @@ class ContactPage extends Component {
         </article>
         <article className='contactBlock'>
           <h3>FORMULARZ KONTAKTOWY</h3>
-          <form className="contactForm" method="POST" action="../components/email.php">
+          <form className="contactForm" method="POST" onSubmit={this.handleSubmit} noValidate>
 
-            <div className="contactFormBlock submitMessage">
-              {this.state.error && <span className="sendingMessage error">{this.state.submitMessage}</span>}
-              {this.state.success && <span className="sendingMessage sent">{this.state.submitMessage}</span>}
+            <div className="contactFormBlock responseMessage">
+              {this.state.error && <span className="sendingMessage error">{this.state.errMessage}</span>}
+              {this.state.success && <span className="sendingMessage sent">Wysłano email!</span>}
             </div>
 
             <div className="contactFormBlock">
@@ -102,8 +112,8 @@ class ContactPage extends Component {
             </div>
 
             <div className="contactFormBlock">
-              <label htmlFor="message">Temat wiadomości</label>
-              <input type="text" id="message" name="message" placeholder="Podaj temat wiadomości.." value={this.state.message} onChange={this.handleChange}></input>
+              <label htmlFor="message">Treść wiadomości</label>
+              <input type="textarea" id="message" name="message" placeholder="Podaj treść wiadomości.." value={this.state.message} onChange={this.handleChange}></input>
             </div>
 
             <div className="contactFormBlock rodo">
@@ -116,10 +126,9 @@ class ContactPage extends Component {
             </div>
 
             {/* recaptcha - enter sitekey */}
-            <div className="g-recaptcha" data-sitekey="enter-key"></div>
+            {/* <div className="g-recaptcha" data-sitekey="enter-key"></div> */}
 
-            <input type="button" value="Submit" className="btn btn--submit" onClick={this.handleSubmit} />
-
+            <input type="submit" value="Submit" className="btn btn--submit" />
           </form>
         </article>
 
