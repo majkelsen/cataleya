@@ -1,28 +1,30 @@
+:root {
+  --mainColor: rgb(50, 50, 40);
+  --secondColor: burlywood;
+  /* var(--mainColor) */
+}
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family:'Montserrat', sans-serif;
+  font-weight: 500;
+  ;
 }
-
-/* 
-body {
-  min-height: 300vh;
-} */
 
 article {
-  min-height: 250px;
+  min-height: 220px;
   text-align: center;
-  /* line-height: 300px; */
   font-size: 50px;
-  font-weight: 700;
-  font-family: 'Questrial', sans-serif;
-  position: relative;
-}
 
-article div {
-  /* position: absolute; */
+  position: relative;
 }
 
 article.first {
   padding-top: 130px;
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 8px;
 }

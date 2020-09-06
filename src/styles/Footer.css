@@ -1,13 +1,15 @@
 .newsletter{
-height: 200px;
+height: 130px;
+line-height: 130px;
 width: 100%;
 text-align: center;
-line-height: 200px;
-color: lightgrey;
-background-color: rgb(40, 40, 40);
+background-color: var(--mainColor);
 display: flex;
 justify-content: center;
 flex-grow: 1;
+
+position: sticky;
+bottom: 0;
 }
 
 .newsletter .newsLeft {
@@ -15,6 +17,7 @@ flex-grow: 1;
   font-size: 25px;
  padding-right: 40px;
  text-align: right;
+ color: var(--secondColor);
 
 }
 
@@ -41,8 +44,9 @@ flex-grow: 1;
 }
 
 .newsletter input{
-  background-color: rgb(40, 40, 40);
-  border: 1.5px solid burlywood;
+  background-color: var(--mainColor);
+  border: 1.5px solid var(--secondColor);
+  border-radius: 5px;
   width: 250px;
   height: 35px;
   color: lightgrey;
@@ -55,10 +59,10 @@ flex-grow: 1;
 }
 
 .newsletter input:hover{
-  border: 4px solid burlywood;
+  border: 4px solid var(--secondColor);
 }
 .newsletter input:focus {
-  border: 3px solid burlywood;
+  border: 3px solid var(--secondColor);
   outline: none;
 }
 
@@ -67,22 +71,23 @@ margin-left: 10px;
 width: 100px;
 height: 35px;
 border: none;
-background-color: burlywood;
+border-radius: 5px;
+background-color: var(--secondColor);
 outline: none;
-text-transform: uppercase;
 }
 
 .newsletter button:hover{
   font-weight: 700;
-  box-shadow: 0 0 3px burlywood;
+  box-shadow: 0 0 3px var(--secondColor);
 }
 
 
 .copywright{
-  height: 60px;
+  position: absolute;
+  line-height: 130px;
+  width: 250px;
+  right: 0;
   text-align: center;
-  line-height: 60px;
-  color: grey;
-  background-color: #eee;
+  color: white;
 }
 

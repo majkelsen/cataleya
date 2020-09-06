@@ -111,23 +111,25 @@ class Footer extends Component {
       <footer>
         <div className="newsletter">
           <div className="newsLeft">
-            Dołącz do newslettera:
+            Newsletter
           </div>
           <div className="newsRight">
             <form onSubmit={this.handleSubmit} noValidate>
-              <input value={this.state.email} onChange={this.handleChange} type="email" placeholder="Podaj email..." className={this.state.inputClass} />
-              <button>dołącz</button>
+              <input value={this.state.email} onChange={this.handleChange} type="email" placeholder="Email Address..." className={this.state.inputClass} />
+              <button>Subscribe</button>
             </form>
 
             {this.state.error && <span className="sendingMessage error">{this.state.errMessage}</span>}
-            {this.state.sent && <span className="sendingMessage sent">Zostałeś dopisany do bazy subskrybentów!</span>}
+            {this.state.sent && <span className="sendingMessage sent">You have just subscribed us! Its great to have you.</span>}
 
           </div>
 
           <div className="submitMessage">
           </div>
+
+          <div className="copywright">©2020 by CATALEYA</div>
         </div>
-        <div className="copywright">©2020 by CATALEYA</div>
+
       </footer>
 
     )

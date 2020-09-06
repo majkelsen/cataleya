@@ -5,14 +5,12 @@ import axios from 'axios'
 class ContactPage extends Component {
   state = {
     name: '',
-    company: '',
     phone: '',
     email: '',
     message: '',
-    checkboxRODO: false,
 
     error: false,
-    errMessage: '',
+    errMessage: 'yoyoyo',
     success: false,
 
   }
@@ -37,42 +35,30 @@ class ContactPage extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
 
-    const validation = this.formValidator()
-
-    if (validation.correct) {
-      axios({
-        method: "POST",
-        url: 'api/contact/email.php',
-        data: this.state
-      }).then((response) => {
-        // console.log(response.data)
-        if (response.data.status === 'success') {
-          this.setState({
-            error: false,
-            success: true,
-            name: '',
-            company: '',
-            phone: '',
-            email: '',
-            message: '',
-            checkboxRODO: false,
-          })
-        } else if (response.data.status === 'fail') {
-          this.setState({
-            success: false,
-            error: true,
-            errMessage: response.data.error[0]
-          })
-        }
-      })
-    }
-  }
-
-  formValidator() {
-    let correct = true;
-    return ({
-      correct
+    // if (validation.correct) {
+    axios({
+      method: "POST",
+      url: 'api/contact/email.php',
+      data: this.state
+    }).then((response) => {
+      if (response.data.status === 'success') {
+        this.setState({
+          error: false,
+          success: true,
+          name: '',
+          phone: '',
+          email: '',
+          message: '',
+        })
+      } else if (response.data.status === 'fail') {
+        this.setState({
+          success: false,
+          error: true,
+          errMessage: response.data.error[0]
+        })
+      }
     })
+    // }
   }
 
   render() {
@@ -80,55 +66,57 @@ class ContactPage extends Component {
       <div className="contactPage">
 
         <article className="first">
-          <div>Contact Page</div>
+          <div>Your Wellbeing is Our Aspiration</div>
         </article>
         <article className='contactBlock'>
-          <h3>FORMULARZ KONTAKTOWY</h3>
+          <h3>Contact Us</h3>
           <form className="contactForm" method="POST" onSubmit={this.handleSubmit} noValidate>
 
             <div className="contactFormBlock responseMessage">
               {this.state.error && <span className="sendingMessage error">{this.state.errMessage}</span>}
-              {this.state.success && <span className="sendingMessage sent">Wysłano email!</span>}
+              {this.state.success && <span className="sendingMessage sent">Email sent!</span>}
             </div>
 
-            <div className="contactFormBlock">
-              <label htmlFor="name">Przedstaw się</label>
-              <input type="text" id="name" name="name" placeholder="Podaj swoje dane" value={this.state.name} onChange={this.handleChange}></input>
+            <div className="contactInputs">
+              <div className="contactFormLeft">
+                <div className="contactFormBlock">
+                  <label htmlFor="name">Name*</label>
+                  <input type="text" id="name" name="name" placeholder="Introduce yourself" value={this.state.name} onChange={this.handleChange}></input>
+                </div>
+
+                <div className="contactFormBlock">
+                  <label htmlFor="phone">Phone</label>
+                  <input type="number" id="phone" name="phone" placeholder="Optional, add you number" value={this.state.phone} onChange={this.handleChange}></input>
+                </div>
+
+                <div className="contactFormBlock">
+                  <label htmlFor="email">Email address*</label>
+                  <input type="email" id="email" name="email" placeholder="Add your email" value={this.state.email} onChange={this.handleChange}></input>
+                </div>
+              </div>
+              <div className="contactFormRight">
+                <div className="contactFormBlock">
+                  <label htmlFor="message">Message*</label>
+                  <textarea name="message" id="message" placeholder="Say hello to us :)" value={this.state.message} onChange={this.handleChange}></textarea>
+                </div>
+              </div>
             </div>
 
-            <div className="contactFormBlock">
-              <label htmlFor="company">Firma</label>
-              <input type="text" id="company" name="company" placeholder="Nie wymagane!" value={this.state.company} onChange={this.handleChange}></input>
-            </div>
-
-            <div className="contactFormBlock">
-              <label htmlFor="phone">Telefon kontaktowy</label>
-              <input type="number" id="phone" name="phone" placeholder="Podaj swój numer.." value={this.state.phone} onChange={this.handleChange}></input>
-            </div>
-
-            <div className="contactFormBlock">
-              <label htmlFor="email">E-mail zwrotny</label>
-              <input type="email" id="email" name="email" placeholder="Podaj swój email.." value={this.state.email} onChange={this.handleChange}></input>
-            </div>
-
-            <div className="contactFormBlock">
-              <label htmlFor="message">Treść wiadomości</label>
-              <input type="textarea" id="message" name="message" placeholder="Podaj treść wiadomości.." value={this.state.message} onChange={this.handleChange}></input>
-            </div>
-
-            <div className="contactFormBlock rodo">
+            {/* //RODO CHECK */}
+            {/* <div className="contactFormBlock rodo">
               <input type="checkbox" id="checkboxRODO" name="checkboxRODO" checked={this.state.checkboxRODO} onChange={this.handleChange} />
               <label htmlFor="checkboxRODO">
                 <p className="checkboxText"> Zgadzam się na przetwarzanie moich danych osobowych na potrzeby obsługi tego zapytania,
                <a target="_blank" href="RODO" style={{ display: 'inline', textDecoration: 'underline' }}>zgodnie z polityką RODO</a>
                 </p>
               </label>
-            </div>
+            </div> */}
 
+            {/* CAPTCHA */}
             {/* recaptcha - enter sitekey */}
             {/* <div className="g-recaptcha" data-sitekey="enter-key"></div> */}
 
-            <input type="submit" value="Submit" className="btn btn--submit" />
+            <input type="submit" value="Send" className="btn btn--submit" />
           </form>
         </article>
 

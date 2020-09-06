@@ -2,12 +2,9 @@ header {
   z-index: 999;
   width: 92%;
   left: 4%;
-  padding: 20px;
-  border-bottom: 1px solid rgb(40, 40, 40);
+  padding: 20px 0;
   position: absolute;
-  font-family: 'Questrial', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 15px;
 }
 
 header nav {
@@ -15,20 +12,23 @@ header nav {
   padding: 15px;
 }
 
-header nav .left{
+header nav .middle{
   flex-grow: 1;
+
 }
 
 header nav ul {
   display: flex;
   list-style: none;
-  color: rgb(40, 40, 40);
+  color: var(--mainColor);
+  justify-content: center;
 }
 
 header nav ul li a{
   display: block;
-  padding: 0 15px;
-  color: rgb(40, 40, 40);
+  margin: 0 10px;
+  padding: 0 10px;
+  color: var(--mainColor);
   text-decoration: none;
   text-align: right;
   bottom: 0;
@@ -38,4 +38,9 @@ header nav ul li a{
 .navLogo {
   /* width: 150px; */
   height: 40px;
+}
+
+.selected{
+  border-bottom: 2.5px solid var(--mainColor);
+  font-weight: 700;
 }
