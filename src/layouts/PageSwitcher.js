@@ -12,8 +12,8 @@ const PageSwitcher = () => {
     <>
       <Switch>
         <Route path="/" exact component={MainPage} />
-        <Route path="/products" component={ProductsPage} />
-        <Route path="/product/:id" component={SingleProductPage} />
+        <Route path="/products" exact component={ProductsPage} />
+        <Route path="/products/:name" component={SingleProductPage} />
         <Route path="/contact" component={ContactPage} />
         <Route component={ErrorPage} />
       </Switch>

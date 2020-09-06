@@ -1,31 +1,69 @@
-.homeArticles article.first {
+.homeArticles article.title {
   padding-top: 130px;
   background-image: url(../img/firstMain.png);
-  height: 600px;
+  height: 100vh;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: cover;
-  text-align: right;
+  text-align: left;
 }
 
-.homeArticles .first div {
-  bottom: 100px;
-  right: 150px;
+.homeArticles .title div {
+  width: 500px;
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  font-size: 23px;
+}
+.homeArticles .title div p {
+  display: inline;
+  color: var(--mainColor);
+}
+
+.homeArticles .title div p.mottoFirst {
+  position: absolute;
+}
+.homeArticles .title div p.mottoFirstPartOne {
+  border-bottom: 1px solid var(--mainColor);
+  padding-bottom: 6px;
+}
+
+.homeArticles .title div p.mottoSecond {
+  position: absolute;
+  top: 21px;
+  left: 70px;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.homeArticles .title div p.mottoSecondPartOne {
+  border-bottom: 1px solid var(--mainColor);
+  padding-bottom: 12px;
+  font-weight: 700;
+  padding-right: 6px;
+  margin-right: 6px;
+}
+.homeArticles .title div p.mottoThird {
+  position: absolute;
+  top: 72px;
+  right: 70px;
 }
 
 .homeArticles article.second{
-  background-color: rgb(40, 40, 40);
+  background-color: var(--mainColor);
+  height: 400px;
 }
 
 .homeArticles .second div {
+  position: absolute;
   top: 130px;
-  left: 170px;
+  right: 170px;
   color: lightgrey;
 }
 
 .homeArticles article.third{
   background-image: url(../img/secondMain.png);
-  height: 600px;
+  height: 700px;
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
@@ -33,29 +71,45 @@
 }
 
 .homeArticles .third div {
+  position: absolute;
   top: 180px;
-  right: 50px;
-  color: rgb(40, 40, 40);
+  left: 50px;
+  color: lightgray;
+}
+
+.homeArticles article.forth{
+  background-color: var(--secondColor);
+  height: 500px;
 }
 
 .homeArticles .forth div {
-  bottom: 30px;
+  position: absolute;
+  bottom: 130px;
   right: 30%;
   color: rgb(40, 40, 40);
 }
 
-.homeArticles .five div {
-position: relative;
-text-align: center;
-line-height: 500px;
-color: lightgrey;
-background-color: rgb(40, 40, 40);
+.homeArticles article.five{
+  background-color: var(--mainColor);
+  height: 400px;
 }
 
+.homeArticles .five div {
+position: absolute;
+top: 60px;
+right: 250px;
+color: lightgrey;
+}
+
+.homeArticles article.six{
+  background-color: white;
+  height: 300px;
+}
 .homeArticles .six div {
-  bottom: 50%;
-  right: 15%;
-  color: rgb(40, 40, 40);
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  color: var(--mainColor);
 }
 
 .homeArticles .seven div {

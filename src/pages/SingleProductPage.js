@@ -4,13 +4,22 @@ import { Link } from 'react-router-dom';
 import "../styles/SingleProductPage.css";
 
 const SingleProductPage = ({ match }) => {
-  return (
-    <div className="SingleProductPage">
 
+
+  return (
+    <div className="singleProductPage">
       <article className="first">
-        <Product id={match.params.id} />
-        <Link to="/products">Powrót do listy produktów</Link>
+        <div>Your Wellbeing is Our Aspiration</div>
       </article>
+
+
+      <section className="productPageDescription">
+        <Product name={match.params.name} />
+
+        <Link to="/products" className='backToProducts'>View All Products</Link>
+      </section>
+
+
 
     </div>
 

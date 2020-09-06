@@ -6,8 +6,16 @@ const MainPage = () => {
   return (
     <div className="homeArticles">
 
-      <article className="first">
-        <div>ALL FOR JU</div>
+      <article className="title">
+        <div>
+          <p className="mottoFirst">
+            <p className="mottoFirstPartOne">Your</p> daily
+          </p>
+          <p className="mottoSecond">
+            <p className="mottoSecondPartOne">healt &</p>beauty
+          </p>
+          <p className="mottoThird">companion</p>
+        </div>
       </article>
 
       <article className="second">

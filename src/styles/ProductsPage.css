@@ -62,8 +62,18 @@ flex-wrap: wrap;
 }
 
 .ProductsPage .productsGraphics ul li a:hover::after{
-    opacity: 0.3;
+  opacity: 0.3;
 }
+
+.ProductsPage .productsGraphics ul li a[unavailable='true']::after{
+  content: "coming soon";
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 50px;
+  padding: 100px 0;
+  pointer-events: none;
+}
+
 
 
 .productDescription{
