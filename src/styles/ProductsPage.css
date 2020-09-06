@@ -1,16 +1,21 @@
-.ProductsPage .first {
-height: 400px;
+.ProductsPage{
+  min-height: calc(100vh - 130px);
 }
 
-.ProductsPage .first div {
-  background-color: blue;
-  bottom: 100px;
-  right: 120px;
-}
-
-.ProductsPage .productsGraphics div{
-  width: 100%;
-  position: relative;
+.ProductsPage::after{
+  content: "";
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+ background-image: url(../img/productsPageBackground.jpg);
+ background-repeat: no-repeat;
+ /* background-position: center; */
+ background-size: cover;
+ background-attachment: fixed;
 }
 
 .ProductsPage .productsGraphics ul{
@@ -19,27 +24,85 @@ flex-direction: row;
 justify-content: space-around;
 padding-bottom: 50px;
 list-style: none;
+font-size: 16px;
+flex-wrap: wrap;
+}
+
+.ProductsPage .productsGraphics ul li{
+  flex-basis: 25%;
+  text-align: left;
+  margin: 30px 0;
 }
 
 .ProductsPage .productsGraphics ul li a{
   display: block;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border: 1px solid black;
-  margin: 30px;
+  margin: 10px auto;
   text-decoration: none;
+  position: relative;
+  transition: 1s ease-in-out;
   }
 
-.super-piguła a{
-  background-color: lightgray;
+.ProductsPage .productsGraphics ul li a::after{
+    content: "\2192";
+    font-size: 80px;
+    text-align: center;
+    line-height: 300px;
+    color: white;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color:black;
+    transition: 0.4s ease-in-out;
 }
 
-.mocny-kop a{
-  background-color: lightsalmon;
+.ProductsPage .productsGraphics ul li a:hover::after{
+    opacity: 0.3;
 }
 
-.coś-na-lenia a{
-  background-color: lightsteelblue;
+
+.productDescription{
+    width: 300px;
+    margin: 0 auto;
 }
 
+.productName {
+
+margin: 15px 0;
+font-weight: 700;
+font-size: 17px;
+}
+
+.productText {
+text-align: justify;
+}
+
+
+.productPhoto {
+  background-image: url(../img/products/templatePhoto.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.productSuperPiguła{
+  background-image: url(../img/products/productSuperPiguła.jpg);
+}
+
+.productMocnyKop{
+  /* background-image: url(../img/products/productSuperPiguła.jpg); */
+}
+
+.productCosNaLenia{
+  background-image: url(../img/products/productSuperPiguła.jpg);
+}
+
+.productMocarnyMocarz{
+  /* background-image: url(../img/products/productSuperPiguła.jpg); */
+}
 

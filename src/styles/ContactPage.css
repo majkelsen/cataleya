@@ -83,6 +83,12 @@
   padding: 4px;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button{
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 .contactForm textarea{
   height: 205.8px;
   overflow: auto;
