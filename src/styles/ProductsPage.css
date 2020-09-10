@@ -1,10 +1,10 @@
 .ProductsPage{
-  min-height: calc(100vh - 130px);
+  min-height: calc(100vh - 70px);
 }
 
 .ProductsPage::after{
   content: "";
-  opacity: 0.3;
+  opacity: 0.15;
   top: 0;
   left: 0;
   bottom: 0;
@@ -13,7 +13,7 @@
   z-index: -1; 
  background-image: url(../img/productsPageBackground.jpg);
  background-repeat: no-repeat;
- /* background-position: center; */
+ background-position: bottom;
  background-size: cover;
  background-attachment: fixed;
 }
@@ -32,6 +32,7 @@ flex-wrap: wrap;
   flex-basis: 25%;
   text-align: left;
   margin: 30px 0;
+  padding: 0 30px;
 }
 
 .ProductsPage .productsGraphics ul li a{

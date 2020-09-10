@@ -1,19 +1,19 @@
 .homeArticles article.title {
-  padding-top: 130px;
-  background-image: url(../img/firstMain.png);
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  text-align: left;
+  /* padding-top: 130px; */
+  /* background-image: url(../img/firstMain.png); */
+  /* height: 100vh; */
+  /* background-repeat: no-repeat; */
+  /* background-position: top; */
+  /* background-size: cover; */
 }
 
-.homeArticles .title div {
+.homeArticles .title div.motto {
   width: 500px;
   position: absolute;
-  top: 250px;
-  left: 250px;
+  top: 300px;
+  left: 200px;
   font-size: 23px;
+  text-align: left;
 }
 .homeArticles .title div p {
   display: inline;
@@ -23,9 +23,10 @@
 .homeArticles .title div p.mottoFirst {
   position: absolute;
 }
-.homeArticles .title div p.mottoFirstPartOne {
+.homeArticles .title div i.mottoFirstPartOne {
   border-bottom: 1px solid var(--mainColor);
   padding-bottom: 6px;
+  font-style: normal;
 }
 
 .homeArticles .title div p.mottoSecond {
@@ -36,18 +37,38 @@
   font-weight: 700;
   letter-spacing: 2px;
 }
-.homeArticles .title div p.mottoSecondPartOne {
+.homeArticles .title div i.mottoSecondPartOne {
   border-bottom: 1px solid var(--mainColor);
   padding-bottom: 12px;
   font-weight: 700;
   padding-right: 6px;
   margin-right: 6px;
+  font-style: normal;
 }
 .homeArticles .title div p.mottoThird {
   position: absolute;
   top: 72px;
   right: 70px;
 }
+
+@keyframes pulse {
+  100%{opacity: 1}
+  50%{opacity: 0.5}
+  0%{opacity: 1}
+}
+
+.arrowDown {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  color: #D9CDE3;
+  font-size: 40px;
+  animation: pulse 2s infinite;
+  cursor: pointer;
+}
+
 
 .homeArticles article.second{
   background-color: var(--mainColor);
@@ -61,6 +82,8 @@
   color: lightgrey;
 }
 
+/* CHARACTERISTICS ARTICLE */
+
 .homeArticles article.third{
   background-image: url(../img/secondMain.png);
   height: 700px;
@@ -70,24 +93,193 @@
   background-attachment: fixed;
 }
 
-.homeArticles .third div {
-  position: absolute;
-  top: 180px;
-  left: 50px;
-  color: lightgray;
+.homeArticles .third .characteristics {
+height: 100%;
+display: flex;
+
 }
+.characteristics div{
+  flex-grow: 1;
+  flex-basis: 30%;
+
+  color: white;
+  font-size: 15px;
+  line-height: 21px;
+  text-align: left;
+}
+
+.firstCharacteristics, .secondCharacteristics, .thirdCharacteristics{
+  position: relative;
+}
+
+.firstCharacteristics, .secondCharacteristics{
+  border-right: 1px solid rgba(0,0,0,0.25);
+}
+
+.characteristics div p{
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.characteristics div i{
+  font-size: 33px;
+}
+
+.characteristics .characteristicsBg{
+  background-color: black;
+  opacity: 0.5;
+  height: 100%;
+
+}
+
+.characteristicsText{
+  opacity: 1;
+  position: absolute;
+  width: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 180px;
+  font-weight: 300;
+}
+
+.secondCharacteristics .characteristicsText{
+  top: 180px;
+}
+
+
+/* ABOUT US ARTICLE */
 
 .homeArticles article.forth{
   background-color: var(--secondColor);
-  height: 500px;
+  overflow: hidden;
 }
 
 .homeArticles .forth div {
-  position: absolute;
-  bottom: 130px;
-  right: 30%;
   color: rgb(40, 40, 40);
 }
+
+.aboutUsBox{
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeArticles div.aboutUsLabel {
+  width: 250px;
+  padding: 20px;
+  margin: 0 auto;
+  border-bottom: 1px solid black;
+  font-size: 35px;
+}
+
+.aboutUsTextBox {
+  height: 250px;
+  position: relative;
+}
+
+.aboutUsFirstText, .aboutUsSecondText, .aboutUsThirdText {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: 18s ease-in-out slider infinite;
+}
+.aboutUsSecondText, .aboutUsThirdText {
+  left: 100%;
+}
+
+.aboutUsFirstText{
+  animation-delay: -2s;
+}
+
+.aboutUsSecondText{
+  animation-delay: 4s;
+}
+
+.aboutUsThirdText{
+  animation-delay: 10s;
+}
+
+.aboutUsText {
+ width: 60%;
+ margin: 0 auto;
+ font-size: 25px;
+}
+
+@keyframes slider{
+  0%{
+    left: 100%;
+  }
+  6.666% {
+    left: 0;
+  }
+  16.666%{
+    left: 0;
+  }
+  33.333%{
+    left: 0;
+  }
+  40%{
+  left: -100%;
+}
+  50%{
+    left: -100%;
+  }
+  100%{
+    left: -100%;
+  }
+}
+
+.dots{
+  margin: 20px auto;
+  height: 8px;
+  font-size: 8px;
+}
+
+.dotsFirst, .dotsSecond, .dotsThird{
+  position: absolute;
+  animation: 18s ease-in-out sliderDots infinite;
+}
+
+.dotsSecond, .dotsThird{
+  opacity: 0;
+}
+
+.dotsFirst{
+  animation-delay: -2s;
+}
+
+.dotsSecond{
+  animation-delay: 4s;
+}
+
+.dotsThird{
+  animation-delay: 10s;
+}
+
+@keyframes sliderDots{
+  0%{
+    opacity: 0;
+  }
+  10.666%{
+    opacity: 1;
+  }
+  33.333%{
+    opacity: 1;
+  }
+  41%{
+    opacity: 0;
+}
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+
 
 .homeArticles article.five{
   background-color: var(--mainColor);

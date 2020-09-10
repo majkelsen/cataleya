@@ -124,10 +124,10 @@ class Footer extends Component {
 
           </div>
 
-          <div className="submitMessage">
-          </div>
+          {/* <div className="submitMessage">
+          </div> */}
 
-          <div className="copywright">©2020 by CATALEYA</div>
+          <div className="copywright">©2020 by INANNALAB</div>
         </div>
 
       </footer>

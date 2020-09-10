@@ -35,6 +35,10 @@ header nav ul li a{
   line-height: 40px;
 }
 
+header  nav ul.right a{
+  padding: 0 4px;
+}
+
 .navLogo {
   /* width: 150px; */
   height: 40px;

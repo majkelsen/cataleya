@@ -24,15 +24,19 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <div className="left"><img src={logo} alt="Logo" className="navLogo" /></div>
+        <ul className="left">
+          <a href="/"><img src={logo} alt="Logo" className="navLogo" /></a>
+        </ul>
         <ul className="middle">
           {navigation}
         </ul>
 
         <ul className="right">
-          <li><a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
-          <li><a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
-          <li><a href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/Cataleyadxb" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.instagram.com/cataleyadxb/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
+
+
+          {/* <li><a href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a></li> */}
 
 
         </ul>

@@ -60,6 +60,8 @@ if (empty($_POST['name'])) {
 			$emailBody = "
 			<body>
 				<div style=\"padding:20px;color:#888;\">
+					Inquiry from: <span style=\"color:black\">$name</span>
+					<br>	
 					Date: <span style=\"color:black\">$date</span>
 					<br>
 					Email: <span style=\"color:black\">$email</span>
@@ -70,7 +72,7 @@ if (empty($_POST['name'])) {
 				</div>
 			</body>
 			";
-
+			
 //email headers
 			$headers = "Content-type: text/html; charset=utf-8; \r\n";
 			$headers.= "MIME-Version: 1.0; \r\n";
@@ -81,7 +83,7 @@ if (empty($_POST['name'])) {
 			$to = 'simpro@vp.pl, info@inannalab.net';
 
 //email subject
-			$subject = "Form inquiry, from - $email";
+			$subject = "Form inquiry, from - $name";
 			
 //EMAIL SENDING FUNCTION
 			if (@mail($to, $subject, $emailBody, $headers)) {

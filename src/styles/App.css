@@ -1,16 +1,13 @@
 :root {
-  --mainColor: rgb(50, 50, 40);
-  --secondColor: burlywood;
-  /* var(--mainColor) */
+  --mainColor: #2C3228;
+  --secondColor: #DEB887;
 }
-
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family:'Montserrat', sans-serif;
-  font-weight: 500;
   ;
 }
 
