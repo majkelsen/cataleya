@@ -37,6 +37,8 @@ const ProductsPage = () => {
           </ul>
         </div>
       </article>
+
+      <div className="bgImage"></div>
     </div>
   )
 }

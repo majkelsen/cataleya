@@ -3,8 +3,7 @@ import "../styles/MainPage.css";
 import { Parallax } from 'react-parallax';
 import { Component } from 'react';
 
-// import { useEffect } from "react";
-// import { useLocation } from "react-router-dom";
+import productPhoto from '../img/mainPageSingleProductImage.png'
 
 class MainPage extends Component {
 
@@ -61,7 +60,7 @@ class MainPage extends Component {
             <div className="firstCharacteristics">
               <div className="characteristicsBg"></div>
               <div className="characteristicsText">
-                <i className="fas fa-air-freshener"></i>
+                <i className="fas fa-hand-holding-heart"></i>
                 <p>Spirit</p>
             Our complete dedication to the customer's needs and satisfaction is what makes us unique. We are committed to do what it takes to succeed and deliver great results.
             </div></div>
@@ -76,7 +75,7 @@ class MainPage extends Component {
             <div className="thirdCharacteristics">
               <div className="characteristicsBg"></div>
               <div className="characteristicsText">
-                <i className="fas fa-cannabis"></i>
+                <i className="fas fa-link"></i>
                 <p>Integrity</p>
             We are not waisting our time by keeping up appearances.
             We put out time and effort towards exceptional products that we promise to deliver.
@@ -127,15 +126,25 @@ class MainPage extends Component {
         </article>
 
         <article className="six">
-          <div>NO I TU TEŻ</div>
+          <div className='productRedirection'>
+            <div className="redirectionProductPhoto">
+              <img src={productPhoto} alt="productPhoto" />
+            </div>
+            <div className="redirectioArticleText">
+              <p>CHECKOUT OUR PRODUCTS</p>
+              <button>Products</button>
+            </div>
+          </div>
         </article>
 
         <article className="seven">
           <Parallax
             bgImage={require('../img/thirdMain.png')}
             bgImageAlt="image"
-            strength={300}
-          ><div style={{ height: '700px' }} />
+            strength={400}
+          ><div style={{
+            height: '600px'
+          }} />
           </Parallax>
         </article>
 

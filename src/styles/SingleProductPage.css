@@ -1,19 +1,20 @@
 .singleProductPage {
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
+  position: relative;
+  overflow: hidden;
 }
 
-.singleProductPage::after{
-  content: "";
-  opacity: 0.3;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.singleProductPage .bgImage{
   position: absolute;
-  z-index: -1; 
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  opacity: 0.15;
+
  background-image: url(../img/productsPageBackground.jpg);
  background-repeat: no-repeat;
- /* background-position: center; */
+ background-position: bottom;
  background-size: cover;
  background-attachment: fixed;
 }

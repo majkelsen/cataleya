@@ -120,7 +120,7 @@ class ContactPage extends Component {
           </form>
         </article>
 
-
+        <div className="bgImage"></div>
       </div>
     )
 

@@ -20,7 +20,7 @@ const SingleProductPage = ({ match }) => {
       </section>
 
 
-
+      <div className="bgImage"></div>
     </div>
 
   )

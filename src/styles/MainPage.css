@@ -293,15 +293,32 @@ right: 250px;
 color: lightgrey;
 }
 
+/* PRODUCTS REDIRECTION ARTICLE */
 .homeArticles article.six{
   background-color: white;
-  height: 300px;
 }
-.homeArticles .six div {
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  color: var(--mainColor);
+
+.homeArticles .productRedirection {
+display: flex;
+justify-content: center;
+}
+
+.homeArticles .redirectionProductPhoto{
+  flex-basis: 15%;
+}
+
+.homeArticles .redirectionProductPhoto img{
+  height: 500px;
+  padding: 20px;
+  transform: rotate(-10deg)
+}
+
+.homeArticles .redirectioArticleText{
+  flex-basis: 30%;
+}
+
+.homeArticles .redirectioArticleText p{
+  padding: 50px 0;
 }
 
 .homeArticles .seven div {
