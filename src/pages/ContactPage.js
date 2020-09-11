@@ -97,7 +97,7 @@ class ContactPage extends Component {
               <div className="contactFormRight">
                 <div className="contactFormBlock">
                   <label htmlFor="message">Message*</label>
-                  <textarea name="message" id="message" placeholder="Say hello to us :)" value={this.state.message} onChange={this.handleChange}></textarea>
+                  <textarea name="message" id="message" placeholder="Enter your message..." value={this.state.message} onChange={this.handleChange}></textarea>
                 </div>
               </div>
             </div>

@@ -132,3 +132,19 @@ margin-left: 70px;
 }
 
 
+@media (max-width: 600px){
+
+  .contactBlock,   .contactForm{
+    width: 95%;
+    padding: 10px 0;
+    margin: 0 auto;
+  }
+
+
+  .contactInputs{
+  display: block;
+  }}
+  
+  @media (max-width: 450px){
+
+  }

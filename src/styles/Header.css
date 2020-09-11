@@ -49,3 +49,29 @@ header  nav ul.right a{
   border-bottom: 2.5px solid var(--mainColor);
   font-weight: 700;
 }
+
+
+@media (max-width: 600px){
+header{
+  width: 100%;
+  left: 0;
+}
+
+  header nav {
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+}
+
+@media (max-width: 450px){
+  header nav a {
+    /* text-align: center; */
+  }
+  header nav ul.middle {
+    flex-direction: column;
+  }
+  header nav ul.right {
+justify-content: flex-end;
+  }
+}

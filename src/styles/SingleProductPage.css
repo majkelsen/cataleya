@@ -21,10 +21,10 @@
 
 .productPageDescription{
   margin: 0 auto;
-  width: 1000px;
-  min-height: 800px;
+  width: 100%;
+  min-height: 400px;
   background-color: white;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   display: flex;
   flex-direction: column;
 }

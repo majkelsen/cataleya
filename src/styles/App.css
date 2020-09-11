@@ -11,6 +11,7 @@
   ;
 }
 
+
 article {
   min-height: 220px;
   text-align: center;
@@ -25,3 +26,15 @@ article.first {
   font-weight: 300;
   letter-spacing: 8px;
 }
+
+@media (max-width: 600px){
+  article.first {
+    padding-top: 160px;
+  }
+  }
+  
+  @media (max-width: 450px){
+    article.first {
+      padding-top: 230px;
+    }
+  }

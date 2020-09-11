@@ -88,10 +88,11 @@ flex-wrap: wrap;
 }
 
 .productName {
-
 margin: 15px 0;
 font-weight: 700;
-font-size: 17px;
+font-size: 25px;
+text-align: center;
+letter-spacing: 1px;
 }
 
 .productText {
@@ -122,3 +123,17 @@ text-align: justify;
   background-image: url(../img/products/productWhiteningPeel.jpg);
 }
 
+@media (max-width: 600px){
+  .ProductsPage .productsGraphics ul{
+    flex-direction: column;
+  }
+  .ProductsPage .productsGraphics ul li{
+   padding: 0;
+   margin: 0 auto;
+   width: 100%;
+  }
+  }
+  
+  @media (max-width: 450px){
+
+  }

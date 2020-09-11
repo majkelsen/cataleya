@@ -1,4 +1,92 @@
-.product {
-  flex-grow: 1;
-  padding: 30px;
+.productSinglePageDescription {
+  /* flex-grow: 1; */
+  padding: 50px;
+  text-align: left;
+  color: var(--mainColor);
+}
+
+.productTop, .productBottom{
+  display: flex;
+  justify-content: center;
+}
+
+/* PRODUCT TOP */
+
+.productTop{
+  justify-content: center;
+}
+
+.productTopLeft, .productTopRight{
+  width: 500px;
+}
+
+.productMainPhoto{
+  width: 450px;
+  height: 100%;
+  margin-right: 50px;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.productTopRight{
+  padding-left: 50px;
+  border-left: 1px solid var(--mainColor);
+}
+
+.productTitle{
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.productText{
+  font-size: 18px;
+  padding-bottom: 30px;
+}
+
+.productSize{
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.healthlyIcons{
+  width: 200px;
+}
+/* PRODUCT BOTTOM */
+
+.productBottom{
+  padding-top: 50px;
+  font-size: 18px;
+}
+
+.productBottom div .title{
+  font-size: 25px;
+  padding-bottom: 15px;
+}
+
+.productBottomUse{
+  padding-right: 25px;
+  width: 375px;
+}
+
+.productBottomIngredients{
+  padding-right: 25px;
+  width: 375px;
+}
+
+.productBottomContact a{
+
+  display: block;
+  width: 250px;
+  background-color: rgba(211, 211, 211, 0.5);
+  padding: 15px 30px;
+
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--mainColor);
+}
+
+.productBottomContact a:hover{
+  background-color: rgba(211, 211, 211, 0.7);
 }

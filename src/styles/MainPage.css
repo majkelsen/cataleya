@@ -173,7 +173,6 @@ display: flex;
   margin: 0 auto;
   border-bottom: 1px solid black;
   font-size: 28px;
-  /* text-transform: uppercase; */
 }
 
 .aboutUsTextBox {
@@ -186,7 +185,7 @@ display: flex;
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
-  animation: 18s ease-in-out slider infinite;
+  animation: 24s ease-in-out slider infinite;
 }
 .aboutUsSecondText, .aboutUsThirdText {
   left: 100%;
@@ -197,11 +196,11 @@ display: flex;
 }
 
 .aboutUsSecondText{
-  animation-delay: 4s;
+  animation-delay: 6s;
 }
 
 .aboutUsThirdText{
-  animation-delay: 10s;
+  animation-delay: 14s;
 }
 
 .aboutUsText {
@@ -242,7 +241,7 @@ display: flex;
 
 .dotsFirst, .dotsSecond, .dotsThird{
   position: absolute;
-  animation: 18s ease-in-out sliderDots infinite;
+  animation: 24s ease-in-out sliderDots infinite;
 }
 
 .dotsSecond, .dotsThird{
@@ -254,11 +253,11 @@ display: flex;
 }
 
 .dotsSecond{
-  animation-delay: 4s;
+  animation-delay: 6s;
 }
 
 .dotsThird{
-  animation-delay: 10s;
+  animation-delay: 14s;
 }
 
 @keyframes sliderDots{
