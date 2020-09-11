@@ -47,6 +47,10 @@ flex-wrap: wrap;
   transition: 1s ease-in-out;
   }
 
+  .ProductsPage .productsGraphics ul li a:hover{
+    /* background-position: right; */
+  }
+
 .ProductsPage .productsGraphics ul li a::after{
     content: "\2192";
     font-size: 80px;
@@ -102,19 +106,19 @@ text-align: justify;
   background-size: cover;
 }
 
-.productSuperPiguła{
-  background-image: url(../img/products/productSuperPiguła.jpg);
+.productGreenCoffee{
+  background-image: url(../img/products/productGreenCoffee.jpg);
 }
 
-.productMocnyKop{
-  /* background-image: url(../img/products/productSuperPiguła.jpg); */
+.productDeoxycholic10{
+  background-image: url(../img/products/productDeoxycholic10.jpg);
 }
 
-.productCosNaLenia{
-  background-image: url(../img/products/productSuperPiguła.jpg);
+.productTripleBoost{
+  background-image: url(../img/products/productTripleBoost.jpg);
 }
 
-.productMocarnyMocarz{
-  /* background-image: url(../img/products/productSuperPiguła.jpg); */
+.productWhiteningPeel{
+  background-image: url(../img/products/productWhiteningPeel.jpg);
 }
 

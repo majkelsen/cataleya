@@ -1,12 +1,3 @@
-.homeArticles article.title {
-  /* padding-top: 130px; */
-  /* background-image: url(../img/firstMain.png); */
-  /* height: 100vh; */
-  /* background-repeat: no-repeat; */
-  /* background-position: top; */
-  /* background-size: cover; */
-}
-
 .homeArticles .title div.motto {
   width: 500px;
   position: absolute;
@@ -69,19 +60,29 @@
   cursor: pointer;
 }
 
+/* MOTTO ARTICLE */
 
-.homeArticles article.second{
-  background-color: var(--mainColor);
+.homeArticles article.mainMottoAricle{
+  background-color: #ECECEC;
   height: 400px;
 }
 
-.homeArticles .second div {
+.homeArticles .mainMottoAricle div {
   position: absolute;
-  top: 130px;
-  right: 170px;
-  color: lightgrey;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  margin: 0 100px 0 50px;
+  color: grey;
+  text-align: right;
+  font-size: 30px;
+  line-height: 70px;
+  font-style: italic;
 }
-
+.homeArticles .mainMottoAricle div p {
+  line-height: 50px;
+  font-size: 25px;
+}
 /* CHARACTERISTICS ARTICLE */
 
 .homeArticles article.third{
@@ -150,13 +151,14 @@ display: flex;
 
 /* ABOUT US ARTICLE */
 
-.homeArticles article.forth{
+.homeArticles article.mainAboutUsArticle{
   background-color: var(--secondColor);
   overflow: hidden;
 }
 
-.homeArticles .forth div {
-  color: rgb(40, 40, 40);
+.homeArticles .mainAboutUsArticle div {
+  color: lightgrey;
+  background-color: var(--mainColor);
 }
 
 .aboutUsBox{
@@ -166,11 +168,12 @@ display: flex;
 }
 
 .homeArticles div.aboutUsLabel {
-  width: 250px;
+  width: 350px;
   padding: 20px;
   margin: 0 auto;
   border-bottom: 1px solid black;
-  font-size: 35px;
+  font-size: 28px;
+  /* text-transform: uppercase; */
 }
 
 .aboutUsTextBox {
@@ -279,48 +282,60 @@ display: flex;
   }
 }
 
-
-
-.homeArticles article.five{
-  background-color: var(--mainColor);
-  height: 400px;
-}
-
-.homeArticles .five div {
-position: absolute;
-top: 60px;
-right: 250px;
-color: lightgrey;
-}
-
 /* PRODUCTS REDIRECTION ARTICLE */
-.homeArticles article.six{
-  background-color: white;
+.homeArticles article.mainProduckRedirectionArticle{
+  background-color: var(--mainColor);
+  color: var(--secondColor);
 }
 
 .homeArticles .productRedirection {
+padding: 0 150px;
 display: flex;
-justify-content: center;
+justify-content: space-evenly;
 }
 
 .homeArticles .redirectionProductPhoto{
   flex-basis: 15%;
+  height: 500px;
 }
 
 .homeArticles .redirectionProductPhoto img{
   height: 500px;
-  padding: 20px;
-  transform: rotate(-10deg)
+  transform: rotate(-11deg);
+  -webkit-filter: drop-shadow(-10px -10px 10px #222);
+  filter:         drop-shadow(-10px -10px 10px #222); 
 }
 
 .homeArticles .redirectioArticleText{
-  flex-basis: 30%;
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.homeArticles .redirectioArticleText p{
-  padding: 50px 0;
+.homeArticles .redirectioArticleText .refToProductsButton{
+width: 200px;
+height: 40px;
+line-height: 40px;
+margin: 0 auto;
+display: block;
+
+border: 1px solid var(--secondColor);
+font-size: 22px;
+background-color: var(--mainColor);
+color: var(--secondColor);
+
+outline: none;
+text-decoration: none;
 }
 
-.homeArticles .seven div {
+.homeArticles .redirectioArticleText .refToProductsButton:hover{
+  font-weight: 500;
+  box-shadow: 0 0 3px var(--secondColor);
+  background-color: #262b22;
+}
+
+/* LAST PHOTO ARTICLE */
+.homeArticles .mainLastPhotoArticle div {
   position: relative;
 }

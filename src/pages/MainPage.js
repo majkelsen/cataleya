@@ -3,6 +3,8 @@ import "../styles/MainPage.css";
 import { Parallax } from 'react-parallax';
 import { Component } from 'react';
 
+import { NavLink } from 'react-router-dom';
+
 import productPhoto from '../img/mainPageSingleProductImage.png'
 
 class MainPage extends Component {
@@ -51,9 +53,44 @@ class MainPage extends Component {
           </div>
         </article>
 
-        <article className="second" ref={this.myArticleToFocus}>
-          <div >BAJDUŻONKO</div>
+        <article className="mainAboutUsArticle" ref={this.myArticleToFocus}>
+          <div className="aboutUsBox">
+            <div className="aboutUsLabel">What Drive's Us</div>
+            <div className="aboutUsTextBox">
+              <div className="aboutUsFirstText">
+                <div className="aboutUsText"> The legacy of InannaLab comes from ancient Sumer goddess Inanna who was worshiped as Queen of Heaven. She was associated with Venus and her symbol of beauty.
+            </div>
+              </div>
+
+              <div className="aboutUsSecondText">
+                <div className="aboutUsText">Creating an innovative and advanced products, is what we want promise to you.
+          </div>
+              </div>
+              <div className="aboutUsThirdText">
+                <div className="aboutUsText">It is with this inspiration that we created Cataleya, a progressive compilation of products to reveal, renew and re-define the authentic form of age- defying beauty.
+          </div>
+              </div>
+            </div>
+            <div className="dots">
+              <div className="dotsFirst">
+                <i className="fas fa-circle"></i>
+                <i className="far fa-circle"></i>
+                <i className="far fa-circle"></i>
+              </div>
+              <div className="dotsSecond">
+                <i className="far fa-circle"></i>
+                <i className="fas fa-circle"></i>
+                <i className="far fa-circle"></i>
+              </div>
+              <div className="dotsThird">
+                <i className="far fa-circle"></i>
+                <i className="far fa-circle"></i>
+                <i className="fas fa-circle"></i>
+              </div>
+            </div>
+          </div>
         </article>
+
 
         <article className="third">
           <div className='characteristics'>
@@ -83,61 +120,27 @@ class MainPage extends Component {
           </div>
         </article>
 
-        <article className="forth">
-          <div className="aboutUsBox">
-            <div className="aboutUsLabel">About Us</div>
-            <div className="aboutUsTextBox">
-              <div className="aboutUsFirstText">
-                <div className="aboutUsText"> The legacy of InannaLab comes from ancient Sumer goddess Inanna who was worshiped as Queen of Heaven. She was associated with Venus and her symbol of beauty.
-            </div>
-              </div>
-
-              <div className="aboutUsSecondText">
-                <div className="aboutUsText">We created an innovative and advanced products to keep that promise to you.
-          </div>
-              </div>
-              <div className="aboutUsThirdText">
-                <div className="aboutUsText">It is with this inspiration that we created Cataleya, a progressive compilation of products to reveal, renew and re-define the authentic form of age- defying beauty.
-          </div>
-              </div>
-            </div>
-            <div className="dots">
-              <div className="dotsFirst">
-                <i className="fas fa-circle"></i>
-                <i className="far fa-circle"></i>
-                <i className="far fa-circle"></i>
-              </div>
-              <div className="dotsSecond">
-                <i className="far fa-circle"></i>
-                <i className="fas fa-circle"></i>
-                <i className="far fa-circle"></i>
-              </div>
-              <div className="dotsThird">
-                <i className="far fa-circle"></i>
-                <i className="far fa-circle"></i>
-                <i className="fas fa-circle"></i>
-              </div>
-            </div>
+        <article className="mainMottoAricle" >
+          <div>Beauty To Us Is About Being Comfortable In Your Own Skin.
+            <p>FOR US ITS A COMMITMENT </p>
+            <p>FOR YOU ITS AN ASSET! </p>
           </div>
         </article>
 
-        <article className="five">
-          <div>TU TEŻ</div>
-        </article>
-
-        <article className="six">
+        <article className="mainProduckRedirectionArticle">
           <div className='productRedirection'>
             <div className="redirectionProductPhoto">
               <img src={productPhoto} alt="productPhoto" />
             </div>
             <div className="redirectioArticleText">
-              <p>CHECKOUT OUR PRODUCTS</p>
-              <button>Products</button>
+              <p>Our All Products</p>
+
+              <NavLink to="./products" exact className="refToProductsButton">Read More</NavLink>
             </div>
           </div>
         </article>
 
-        <article className="seven">
+        <article className="mainLastPhotoArticle">
           <Parallax
             bgImage={require('../img/thirdMain.png')}
             bgImageAlt="image"
