@@ -7,11 +7,11 @@ const products = [
   {
     id: "green-coffee",
     name: "Green Coffee",
-    text: "Green coffee bean extract contains several bioactive compounds, including caffeine and chlorogenic acids, which account for its healthful antioxidant and metabolism booster properties. Chlorogenic acid helps with weight loss and support healthy lifestyle",
-    graphicName: "productGreenCoffee",
+    text: "Green coffee bean extract contains several bioactive compounds. Including chlorogenic acids, which accounts for its healthful antioxidant and metabolism booster properties. Chlorogenic acid helps with weight loss and support healthy lifestyle.",
+    graphicsNames: ["greenCoffee.jpg", "a1.png", "a2.png", "a3.png", "a4.png", "a5.png"],
     boxSize: "Box 20 x 5 ml",
-    howToUse: "Dilute 1 ampule i 1,5l of water and dring during the day ",
-    ingredients: ["Green coffee bean extract", "Aroma of berries", "Potasium sorbate", "Aqua"]
+    howToUse: "Dilute 1 AMPULE in 1.5 L of water, and drink during the day",
+    ingredients: ["Green coffee bean extract", "Aroma of berries", "Potassium sorbate", "Aqua"]
   },
 ]
 

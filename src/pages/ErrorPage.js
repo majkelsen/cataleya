@@ -6,7 +6,7 @@ const ErrorPage = () => {
     <div className="ErrorPage">
 
       <article className="first">
-        <div>Error Page</div>
+        <div>Page Not Found</div>
       </article>
 
     </div>

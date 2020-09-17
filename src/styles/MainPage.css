@@ -1,8 +1,16 @@
+.title .react-parallax img{
+  /* content: url(../img/fourMain.jpg); */
+}
+
+
+
+/* MOTTO CONTAINTER */
+
 .homeArticles .title div.motto {
-  width: 500px;
+  width: 550px;
   position: absolute;
   top: 300px;
-  left: 200px;
+  left: 190px;
   font-size: 23px;
   text-align: left;
 }
@@ -23,7 +31,7 @@
 .homeArticles .title div p.mottoSecond {
   position: absolute;
   top: 21px;
-  left: 70px;
+  left: 55px;
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -39,8 +47,10 @@
 .homeArticles .title div p.mottoThird {
   position: absolute;
   top: 72px;
-  right: 70px;
+  left: 305px;
 }
+
+/* ARROW STYLING */
 
 @keyframes pulse {
   100%{opacity: 1}
@@ -64,32 +74,24 @@
 
 .homeArticles article.mainMottoAricle{
   background-color: #ECECEC;
-  height: 400px;
 }
 
-.homeArticles .mainMottoAricle div {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  margin: 0 100px 0 50px;
-  color: grey;
-  text-align: right;
-  font-size: 30px;
-  line-height: 70px;
-  font-style: italic;
+.homeArticles .mainMottoAricle div .firstMotto {
+height: 450px;
 }
-.homeArticles .mainMottoAricle div p {
-  line-height: 50px;
-  font-size: 25px;
-}
+
 /* CHARACTERISTICS ARTICLE */
+
+.space {
+  height: 60px;
+  width: 100%;
+}
 
 .homeArticles article.third{
   background-image: url(../img/secondMain.png);
-  height: 700px;
+  /* height: 700px; */
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -99,14 +101,14 @@ height: 100%;
 display: flex;
 
 }
-.characteristics div{
+.characteristics .trait{
   flex-grow: 1;
   flex-basis: 30%;
-
   color: white;
   font-size: 15px;
   line-height: 21px;
   text-align: left;
+  height: 500px;
 }
 
 .firstCharacteristics, .secondCharacteristics, .thirdCharacteristics{
@@ -114,7 +116,7 @@ display: flex;
 }
 
 .firstCharacteristics, .secondCharacteristics{
-  border-right: 1px solid rgba(0,0,0,0.25);
+  border-right: 1px solid rgba(0,0,0,0.25) ;
 }
 
 .characteristics div p{
@@ -123,31 +125,33 @@ display: flex;
   padding: 10px 0;
 }
 
-.characteristics div i{
-  font-size: 33px;
+.characteristics div .characteristicsIcons{
+  height: 40px;
 }
 
-.characteristics .characteristicsBg{
+ .characteristicsBg{
   background-color: black;
   opacity: 0.5;
   height: 100%;
-
+z-index: 0;
 }
 
 .characteristicsText{
   opacity: 1;
   position: absolute;
-  width: 280px;
+  top: 0;
+  width: 60%;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 180px;
+  /* bottom: 160px; */
   font-weight: 300;
+  padding: 60px 0;
 }
 
-.secondCharacteristics .characteristicsText{
-  top: 180px;
+.firstCharacteristics .characteristicsText, .thirdCharacteristics .characteristicsText{
+  top: unset;
+  bottom: 0;
 }
-
 
 /* ABOUT US ARTICLE */
 
@@ -171,7 +175,6 @@ display: flex;
   width: 350px;
   padding: 20px;
   margin: 0 auto;
-  border-bottom: 1px solid black;
   font-size: 28px;
 }
 
@@ -204,9 +207,10 @@ display: flex;
 }
 
 .aboutUsText {
- width: 60%;
+ width: 50%;
  margin: 0 auto;
  font-size: 25px;
+ font-weight: 200;
 }
 
 @keyframes slider{
@@ -337,4 +341,149 @@ text-decoration: none;
 /* LAST PHOTO ARTICLE */
 .homeArticles .mainLastPhotoArticle div {
   position: relative;
+}
+
+.lastPhotoBg{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.3;
+}
+
+@media (max-width: 850px){
+.title .react-parallax img{
+    content: url(../img/minfirstMain.png);
+  }
+
+.homeArticles article.third{
+  background-image: url(../img/minsecondMain.png);
+}
+
+.mainLastPhotoArticle .react-parallax img{
+  content: url(../img/minthirdMain.png);
+}
+}
+
+@media (max-width: 900px) and (max-height: 600px){
+  .homeArticles .title div.motto {
+    top: 170px;
+    left: 120px;
+    font-size: 19px;
+  }
+  .homeArticles .title div p.mottoSecond {
+    top: 21px;
+    left: 48px;
+    font-size: 28px;
+  }
+  .homeArticles .title div p.mottoThird {
+    top: 50px;
+    left: 200px;
+  }
+.copywright{
+  display: none;
+}
+}
+
+@media (max-width: 600px){
+  .react-parallax-bgimage{
+    left: -100px !important;
+  }
+
+  .homeArticles .title div.motto {
+    width: 90%;
+    margin: 5%;
+    top: 440px;
+    left: 0;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .homeArticles .title div p.mottoSecond {
+    top: 21px;
+    left: 43px;
+    font-size: 23px;
+  }
+  .homeArticles .title div p.mottoThird {
+    top: 50px;
+    left: 175px;
+  }
+
+  .aboutUsText{
+    font-size: 17px;
+  }
+  .characteristics{
+    flex-direction: column;
+  }
+  .characteristics .trait{
+    height: 100%;
+  }
+  .space{
+height: 30px;
+  }
+
+  .characteristics .characteristicsBg{
+  position: absolute;
+  width: 100%;
+  }
+
+  div.characteristicsText{
+    position: static;
+    left: 0;
+    transform: translateX(0);
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+  .firstCharacteristics .characteristicsText, .thirdCharacteristics .characteristicsText, .secondCharacteristics .characteristicsText{
+    top: 0;
+    height: 100%;
+  }
+
+
+  
+
+  .homeArticles .mainMottoAricle div .firstMotto {
+    height: unset;
+    width: 100vw;
+    }
+
+  .homeArticles .productRedirection{
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0 30px 0;
+  }
+
+  .homeArticles .redirectionProductPhoto{
+    height: 100%;
+  }
+
+  .homeArticles .redirectionProductPhoto img{
+    width: 55vw;
+    height: unset;
+  }
+
+  .homeArticles .redirectioArticleText p{
+padding: 0 0 30px 0;
+font-size: 24px;
+  }
+  .homeArticles .redirectioArticleText .refToProductsButton{
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+  }
+}
+  
+@media (max-width: 360px){
+  .react-parallax-bgimage{
+    left: -100px !important;
+  }
+  .homeArticles .title div.motto {
+    top: 330px;
+
+  }
 }

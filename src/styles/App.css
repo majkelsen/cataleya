@@ -13,7 +13,7 @@
 
 
 article {
-  min-height: 220px;
+  min-height: 100px;
   text-align: center;
   font-size: 50px;
 
@@ -26,10 +26,18 @@ article.first {
   font-weight: 300;
   letter-spacing: 8px;
 }
+@media (max-width: 850px){
+  article.first {
+    padding-top: 170px;
+  }
+}
 
 @media (max-width: 600px){
   article.first {
     padding-top: 160px;
+  }
+  .first div{
+    display: none;
   }
   }
   

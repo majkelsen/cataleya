@@ -51,7 +51,7 @@ header  nav ul.right a{
 }
 
 
-@media (max-width: 600px){
+@media (max-width: 850px){
 header{
   width: 100%;
   left: 0;

@@ -20,7 +20,7 @@
 }
 
 .productPageDescription{
-  margin: 0 auto;
+  margin: 30px auto;
   width: 100%;
   min-height: 400px;
   background-color: white;
@@ -41,4 +41,10 @@
   color: var(--secondColor);
   background-color: var(--mainColor);
   border-radius: 5px;
+}
+
+@media (max-width: 600px){
+  .productPageDescription{
+    margin: 50px 0;
+  }
 }

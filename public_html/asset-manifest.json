@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.69ef28cc.chunk.css",
+    "main.js": "/static/js/main.70b87f4e.chunk.js",
+    "main.js.map": "/static/js/main.70b87f4e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e5733936.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e5733936.js.map",
+    "static/js/2.1c11a846.chunk.js": "/static/js/2.1c11a846.chunk.js",
+    "static/js/2.1c11a846.chunk.js.map": "/static/js/2.1c11a846.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9eba2a6684ac990ddb73bd286b9138be.js": "/precache-manifest.9eba2a6684ac990ddb73bd286b9138be.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.69ef28cc.chunk.css.map": "/static/css/main.69ef28cc.chunk.css.map",
+    "static/js/2.1c11a846.chunk.js.LICENSE.txt": "/static/js/2.1c11a846.chunk.js.LICENSE.txt",
+    "static/media/cataleya-logo.png": "/static/media/cataleya-logo.50781cd0.png",
+    "static/media/ContactPage.css": "/static/media/contactPageBackground.018fcc81.jpg",
+    "static/media/firstMain.png": "/static/media/firstMain.050fcca3.png",
+    "static/media/healtlyIcons.png": "/static/media/healtlyIcons.cb1c7e06.png",
+    "static/media/mainPageSingleProductImage.png": "/static/media/mainPageSingleProductImage.a5238438.png",
+    "static/media/ProductsPage.css": "/static/media/templatePhoto.07954389.png",
+    "static/media/SingleProductPage.css": "/static/media/productsPageBackground.87f5f09e.jpg",
+    "static/media/MainPage.css": "/static/media/secondMain.1c243597.png",
+    "static/media/thirdMain.png": "/static/media/thirdMain.33f0996c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e5733936.js",
+    "static/js/2.1c11a846.chunk.js",
+    "static/css/main.69ef28cc.chunk.css",
+    "static/js/main.70b87f4e.chunk.js"
+  ]
+}

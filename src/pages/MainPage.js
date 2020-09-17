@@ -5,8 +5,6 @@ import { Component } from 'react';
 
 import { NavLink } from 'react-router-dom';
 
-import productPhoto from '../img/mainPageSingleProductImage.png'
-
 class MainPage extends Component {
 
   //get reference to element to which will be scrolled
@@ -22,6 +20,8 @@ class MainPage extends Component {
   }
 
   render() {
+    // const hearthImage = 
+
     return (
       <div className="homeArticles">
 
@@ -32,7 +32,6 @@ class MainPage extends Component {
             strength={300}
           ><div style={{
             height: '100vh',
-            backgroundPosition: 'top',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
           }} />
@@ -43,7 +42,7 @@ class MainPage extends Component {
               <i className="mottoFirstPartOne">Your</i> daily
           </p>
             <p className="mottoSecond">
-              <i className="mottoSecondPartOne">healt &</i>beauty
+              <i className="mottoSecondPartOne">health &</i>beauty
           </p>
             <p className="mottoThird">companion</p>
           </div>
@@ -55,19 +54,19 @@ class MainPage extends Component {
 
         <article className="mainAboutUsArticle" ref={this.myArticleToFocus}>
           <div className="aboutUsBox">
-            <div className="aboutUsLabel">What Drive's Us</div>
+            <div className="aboutUsLabel">Our Aspiration</div>
             <div className="aboutUsTextBox">
               <div className="aboutUsFirstText">
-                <div className="aboutUsText"> The legacy of InannaLab comes from ancient Sumer goddess Inanna who was worshiped as Queen of Heaven. She was associated with Venus and her symbol of beauty.
+                <div className="aboutUsText"> The inspiration of InannaLab is derived from the ancient Somerian name Inanna, the deity of love and procreation.
             </div>
               </div>
 
               <div className="aboutUsSecondText">
-                <div className="aboutUsText">Creating an innovative and advanced products, is what we want promise to you.
+                <div className="aboutUsText"> Delivering these innovative and health-driven products is what we promise you.
           </div>
               </div>
               <div className="aboutUsThirdText">
-                <div className="aboutUsText">It is with this inspiration that we created Cataleya, a progressive compilation of products to reveal, renew and re-define the authentic form of age- defying beauty.
+                <div className="aboutUsText"> Cataleya, is the progressive compilation of products that helps reveal, renew and re-define the authentic form of age-defying beauty.
           </div>
               </div>
             </div>
@@ -93,47 +92,46 @@ class MainPage extends Component {
 
 
         <article className="third">
+          <div className="space"><div className="characteristicsBg"></div></div>
           <div className='characteristics'>
-            <div className="firstCharacteristics">
+            <div className="firstCharacteristics trait">
               <div className="characteristicsBg"></div>
               <div className="characteristicsText">
-                <i className="fas fa-hand-holding-heart"></i>
+                <img src={require('../img/passionate.png')} alt="icon" className="characteristicsIcons" />
                 <p>Spirit</p>
-            Our complete dedication to the customer's needs and satisfaction is what makes us unique. We are committed to do what it takes to succeed and deliver great results.
+                The dedication to our customer's needs and satisfaction is what makes us unique. We are committed to provide both success astonishing results.
             </div></div>
-            <div className="secondCharacteristics">
+            <div className="secondCharacteristics trait">
               <div className="characteristicsBg"></div>
               <div className="characteristicsText">
-                <i className="fas fa-burn"></i>
+                <img src={require('../img/lotus.png')} alt="icon" className="characteristicsIcons" />
                 <p>Passion</p>
-            It’s passion that holds our standards high.
-            Is a testimony of our engagement and dedication in what we are doing. With passion we seek the best and commit to it.
+                Is what holds our standards high, the testimony of our engagement and dedication in what we are doing. Seeking the best and committing to it.
             </div></div>
-            <div className="thirdCharacteristics">
+            <div className="thirdCharacteristics trait">
               <div className="characteristicsBg"></div>
               <div className="characteristicsText">
-                <i className="fas fa-link"></i>
+                <img src={require('../img/puzzle-pieces.png')} alt="icon" className="characteristicsIcons" />
                 <p>Integrity</p>
-            We are not waisting our time by keeping up appearances.
-            We put out time and effort towards exceptional products that we promise to deliver.
+                We have paved our path through strong belief in both health and beauty aspect from inside and out ensuring our client’s satisfaction and appreciation.
             </div></div>
           </div>
+          <div className="space"><div className="characteristicsBg"></div></div>
         </article>
 
         <article className="mainMottoAricle" >
-          <div>Beauty To Us Is About Being Comfortable In Your Own Skin.
-            <p>FOR US ITS A COMMITMENT </p>
-            <p>FOR YOU ITS AN ASSET! </p>
+          <div>
+            <img src={require('../img/text.png')} alt="motto" className="firstMotto" />
           </div>
         </article>
 
         <article className="mainProduckRedirectionArticle">
           <div className='productRedirection'>
             <div className="redirectionProductPhoto">
-              <img src={productPhoto} alt="productPhoto" />
+              <img src={require('../img/mainPageSingleProductImage.png')} alt="productPhoto" />
             </div>
             <div className="redirectioArticleText">
-              <p>Our All Products</p>
+              <p>Meet Our Products</p>
 
               <NavLink to="./products" exact className="refToProductsButton">Read More</NavLink>
             </div>
@@ -145,7 +143,7 @@ class MainPage extends Component {
             bgImage={require('../img/thirdMain.png')}
             bgImageAlt="image"
             strength={400}
-          ><div style={{
+          ><div className="lastPhotoBg" style={{
             height: '600px'
           }} />
           </Parallax>

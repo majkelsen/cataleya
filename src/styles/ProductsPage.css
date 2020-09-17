@@ -100,14 +100,13 @@ text-align: justify;
 }
 
 
-.productPhoto {
-  background-image: url(../img/products/templatePhoto.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.productPhoto img{
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
-.productGreenCoffee{
+/* .productGreenCoffee{
   background-image: url(../img/products/productGreenCoffee.jpg);
 }
 
@@ -121,17 +120,25 @@ text-align: justify;
 
 .productWhiteningPeel{
   background-image: url(../img/products/productWhiteningPeel.jpg);
+} */
+@media (max-width: 850px){
+  .ProductsPage .bgImage{
+    background-image: url(../img/minproductsPageBackground.jpg);
+   }
 }
 
-@media (max-width: 600px){
+@media (max-width: 650px){
   .ProductsPage .productsGraphics ul{
     flex-direction: column;
   }
   .ProductsPage .productsGraphics ul li{
    padding: 0;
-   margin: 0 auto;
+   margin: 20px auto;
    width: 100%;
   }
+
+
+
   }
   
   @media (max-width: 450px){
