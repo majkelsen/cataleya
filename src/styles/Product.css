@@ -108,7 +108,7 @@ transform: translate(-50%,-50%);
 /* first photo style */
 .productMainPhoto{
   width: 445px;
-  height: 350px;
+  min-height: 350px;
   margin-right: 50px;
   overflow: hidden;
   cursor: pointer;
@@ -180,13 +180,14 @@ filter: brightness(90%);
 }
 
 .productBottomUse{
-  padding-right: 25px;
-  width: 375px;
+  padding-right: 45px;
+  width: 400px;
+  text-align: justify;
 }
 
 .productBottomIngredients{
   padding-right: 25px;
-  width: 375px;
+  width: 350px;
 }
 
 .productBottomContact a{

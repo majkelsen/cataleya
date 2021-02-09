@@ -117,8 +117,12 @@ class Product extends Component {
             <div className="productTopRight">
               <p className="productTitle">{productData.name}</p>
               <p className="productText">{productData.text}</p>
+              <h5>Recommended for:</h5> <p className="productText">{productData.recommendedFor}</p>
+              <h5>Effects:</h5> <p className="productText">{productData.effects}</p>
               <p className="productSize">{productData.boxSize}</p>
-              <img src={icons} alt="healthly" className="healthlyIcons" />
+              {productData.healthyIcons &&
+                <img src={icons} alt="healthly" className="healthlyIcons" />}
+
             </div>
           </div>
           <div className="productBottom">
@@ -127,7 +131,9 @@ class Product extends Component {
               <p>{productData.howToUse}</p>
             </div>
             <div className="productBottomIngredients">
-              <p className="title">Ingredients:</p>
+              <p className="title">
+                {productData.fullIngredients ? "Ingredients:" : "Main ingredients:"}
+              </p>
               {productData.ingredients.map(ingredient => <p key={ingredient}>{ingredient}</p>)}
             </div>
             <div className="productBottomContact">

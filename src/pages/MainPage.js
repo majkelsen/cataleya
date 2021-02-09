@@ -119,19 +119,19 @@ class MainPage extends Component {
           <div className="space"><div className="characteristicsBg"></div></div>
         </article>
 
-        <article className="mainMottoAricle" >
+        {/* <article className="mainMottoAricle" >
           <div>
             <img src={require('../img/text.png')} alt="motto" className="firstMotto" />
           </div>
-        </article>
+        </article> */}
 
         <article className="mainProduckRedirectionArticle">
           <div className='productRedirection'>
             <div className="redirectionProductPhoto">
-              <img src={require('../img/mainPageSingleProductImage.png')} alt="productPhoto" />
+              <img src={require('../img/text.png')} alt="motto" className="firstMotto" />
             </div>
             <div className="redirectioArticleText">
-              <p>Meet Our Products</p>
+              <p>Our Products</p>
 
               <NavLink to="./products" exact className="refToProductsButton">Read More</NavLink>
             </div>

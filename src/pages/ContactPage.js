@@ -35,6 +35,7 @@ class ContactPage extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
 
+    console.log('kliknieto wysylanie emailu')
     // if (validation.correct) {
     axios({
       method: "POST",
@@ -42,6 +43,7 @@ class ContactPage extends Component {
       data: this.state
     }).then((response) => {
       if (response.data.status === 'success') {
+        console.log('odpowiedź z PHPa - sukces')
         this.setState({
           error: false,
           success: true,
@@ -51,6 +53,7 @@ class ContactPage extends Component {
           message: '',
         })
       } else if (response.data.status === 'fail') {
+        console.log('odpowiedź z PHPa - fail')
         this.setState({
           success: false,
           error: true,

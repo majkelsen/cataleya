@@ -46,3 +46,7 @@ article.first {
       padding-top: 230px;
     }
   }
+
+  h5 {
+    font-size: 0.4em;
+  }
